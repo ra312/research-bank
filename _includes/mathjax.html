@@ -1,0 +1,37 @@
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    packages: {'[+]': ['ams', 'boldsymbol']},
+    tags: 'ams',
+    macros: {
+      // Sets
+      E:    '{\\mathbb{E}}',
+      R:    '{\\mathbb{R}}',
+      N:    '{\\mathbb{N}}',
+      Z:    '{\\mathbb{Z}}',
+      Prob: '{\\mathbb{P}}',
+      // Common operations
+      KL:     ['{\\mathrm{KL}\\!\\left(#1 \\,\\|\\, #2\\right)}', 2],
+      norm:   ['{\\left\\|#1\\right\\|}', 1],
+      abs:    ['{\\left|#1\\right|}', 1],
+      inner:  ['{\\langle #1,\\, #2 \\rangle}', 2],
+      argmin: '{\\operatorname*{arg\\,min}}',
+      argmax: '{\\operatorname*{arg\\,max}}',
+      // ML specific
+      loss:   '{\\mathcal{L}}',
+      data:   '{\\mathcal{D}}',
+      model:  '{\\mathcal{M}}',
+      param:  '{\\theta}',
+      grad:   '{\\nabla}',
+    }
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+        id="MathJax-script" async></script>

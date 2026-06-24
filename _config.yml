@@ -1,0 +1,26 @@
+title: Research Ideas
+description: ML research hypotheses and validation plans
+author: ra312
+baseurl: "/research-ideas"
+url: "https://ra312.github.io"
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+highlighter: rouge
+permalink: /:title/
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - _tex/
+  - _scripts/
+  - vendor/
+  - "*.sh"
