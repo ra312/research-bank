@@ -1,7 +1,7 @@
 # Research Ideas
 
 ML research hypotheses, validation plans, and results — published at
-**https://ra312.github.io/research-ideas/**
+**https://ra312.github.io/research-bank/**
 
 ---
 
@@ -18,12 +18,12 @@ git commit -m "Phase 1: Jekyll base site with MathJax"
 
 Go to https://github.com/new and create a **public** repository named exactly:
 ```
-research-ideas
+research-bank
 ```
 Do **not** initialise with a README (you already have one).
 
 ```bash
-git remote add origin https://github.com/ra312/research-ideas.git
+git remote add origin git@github.com:ra312/research-bank.git
 git branch -M main
 git push -u origin main
 ```
@@ -51,4 +51,4 @@ Push to `main` and the CI pipeline compiles them to posts automatically.
 
 ## Browser Editing (Phase 3+)
 
-Visit `https://ra312.github.io/research-ideas/admin/` and log in with GitHub.
+Visit `https://ra312.github.io/research-bank/admin/` and log in with GitHub.
