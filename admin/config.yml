@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: ra312/research-bank
+  branch: main
+
+media_folder: assets/images
+public_folder: /research-bank/assets/images
+
+site_url: https://ra312.github.io/research-bank
+
+collections:
+  - name: research_ideas
+    label: Research Ideas
+    label_singular: Research Idea
+    folder: _tex
+    extension: tex
+    format: frontmatter
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} [{{status}}] — {{date}}"
+    sort_field: date
+    sort_direction: Descending
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Concise hypothesis or question"
+
+      - label: Date
+        name: date
+        widget: datetime
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+
+      - label: Status
+        name: status
+        widget: select
+        options:
+          - { label: "Draft", value: draft }
+          - { label: "Exploring", value: exploring }
+          - { label: "Validated", value: validated }
+          - { label: "Archived", value: archived }
+        default: draft
+
+      - label: Tags
+        name: tags
+        widget: list
+        hint: "e.g. rlhf, evaluation, transformers"
+
+      - label: Validation Plan (summary)
+        name: eval_plan
+        widget: string
+        required: false
+        hint: "One-sentence summary of how you will validate this idea"
+
+      - label: Related Ideas
+        name: related
+        widget: list
+        required: false
+        hint: "Slugs of related posts, e.g. 2026-06-24-other-idea"
+
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: post
+
+      - label: LaTeX Body
+        name: body
+        widget: text
+        hint: "Write LaTeX here. Use \\section{}, \\begin{theorem}, $$math$$, \\idea{slug} for inter-links."
